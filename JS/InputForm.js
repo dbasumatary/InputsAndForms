@@ -26,6 +26,20 @@ email.addEventListener('input',function(){
     }
 });
 
+// UC3: User need to follow mobile number format of 2-digit country code followed by 10-digit number
+
+const PHONE_REGEX = RegExp('^[0-9]{1,2}\\s{1}[0-9]{10}$');
+const telephone = document.querySelector('#tel');
+const telephoneError = document.querySelector('.tel-error');
+telephone.addEventListener('input', function() {
+    if (PHONE_REGEX.test(telephone.value)) {
+        telephoneError.textContent = "";
+    } 
+    else {
+        telephoneError.textContent = "TELEPHONE NUMBER Is Incorrect";
+    }
+});
+
 const salary = document.qurySelector('#salary');
 const output = document.querySelector('.salary-output');
 output.textContent = salary.value;
