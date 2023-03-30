@@ -40,9 +40,10 @@ telephone.addEventListener('input', function() {
     }
 });
 
-//UC 4: User needs to follow pre-defined password rule 1 : Password should have minimum 8 characters
+//UC5: User needs to follow pre-defined password rules : should have minimum 8 characters, at least one upper case, 
+//at least one numeric number and exactly one special character
 
-const PASSWORD_REGEX = RegExp('^.{8,}$')
+const PASSWORD_REGEX = RegExp('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,}$');
 const password = document.querySelector('#pwd');
 const passwordError = document.querySelector('.pwd-error');
 password.addEventListener('input', function() {
