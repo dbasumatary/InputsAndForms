@@ -40,6 +40,19 @@ telephone.addEventListener('input', function() {
     }
 });
 
+//UC 4: User needs to follow pre-defined password rule 1 : Password should have minimum 8 characters
+
+const PASSWORD_REGEX = RegExp('^.{8,}$')
+const password = document.querySelector('#pwd');
+const passwordError = document.querySelector('.pwd-error');
+password.addEventListener('input', function() {
+    if (PASSWORD_REGEX.test(password.value)) {
+        passwordError.textContent = "";
+    } else {
+        passwordError.textContent = "PASSWORD Is Incorrect";
+    }
+});
+
 const salary = document.qurySelector('#salary');
 const output = document.querySelector('.salary-output');
 output.textContent = salary.value;
