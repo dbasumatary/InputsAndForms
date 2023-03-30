@@ -17,10 +17,12 @@
             <div>
                 <label for="pwd">Password: </label>
                 <input type="password" id="pwd" name="pwd">
+                <error-output class="pwd-error" for="pwd"></error-output>
             </div>
             <div>
                 <label for="email">Email: </label>
                 <input type="email" id="email" name="email">
+                <error-output class="email-error" for="email"></error-output>
             </div>
             <div>
                 <label for="url">URL: </label>
@@ -33,6 +35,7 @@
             <div>
                 <label for="tel">Telephone: </label>
                 <input type="tel" id="tel" name="tel">
+                <error-output class="tel-error" for="tel"></error-output>
             </div>
             <div>
                 <label for="search">Search: </label>
@@ -45,8 +48,7 @@
             </div>
             <div>
                 <label for="salary">Choose your salary: </label>
-                <input type="range" name="salary" id="salary" min="300000"
-                        max="500000" step="100" value="400000">
+                <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
                 <output class="salary-output" for="salary">400000</output>
             </div>
             <div>
