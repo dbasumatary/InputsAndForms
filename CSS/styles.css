@@ -37,9 +37,10 @@ label, input, button {
 }
 
 label{
-    text-align: right;
+    text-align: left;
     width: 25%;
-    margin-right: 2%;
+    margin-left: 5%;
+    padding: auto;
 }
 
 input {
@@ -47,12 +48,32 @@ input {
 }
 
 button {
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
 }
+
 
 error-output {
     font-size: 12 px;
     font-style: italic;
     color: red;
+}
+
+.btn{
+    width: 50%;
+    color:rgb(225, 174, 111);
+    border:none;
+    border-radius:10px;
+}
+.btn:hover{
+    background-color:bisque;
+    transition: 0.7s;
+}
+
+.entry{
+    width: 90%;
+}
+
+.spanresult{
+    height: auto;
 }
