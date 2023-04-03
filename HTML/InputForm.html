@@ -7,54 +7,55 @@
         <link rel="stylesheet" href="../CSS/styles.css">
     </head>
     <body>
-        <form>
+        <form id="myForm" method="get" target="_blank">
             <header class="headerContainer"><h1> HTML 5 Form Input Fields</h1></header>
-            <div>
-                <label for="text">Name:</label>
-                <input type="text" id="text" name="text">
-                <error-output class="text-error" for="text"></error-output>
+            <div class="entry">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+                <error-output class="name-error" for="name"></error-output>
             </div>
-            <div>
+            <div class="entry">
                 <label for="pwd">Password: </label>
-                <input type="password" id="pwd" name="pwd">
+                <input type="password" id="pwd" name="pwd" placeholder="Must have an UPPERCASE, a digit and a special character">
                 <error-output class="pwd-error" for="pwd"></error-output>
             </div>
-            <div>
+            <div class="entry">
                 <label for="email">Email: </label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" placeholder="Eg: abc@xyz.com">
                 <error-output class="email-error" for="email"></error-output>
             </div>
-            <div>
+            <div class="entry">
                 <label for="url">URL: </label>
-                <input type="url" id="url" name="url">
+                <input type="url" id="url" name="url" placeholder="Eg: https://www.abc.com">
+                <error-output class="url-error" for="url"></error-output>
             </div>
-            <div>
-                <label for="number">Number: </label>
-                <input type="number" id="number" name="number">
+        
+            <div class="entry">
+                <label for="mob">Mobile: </label>
+                <input type="tel" id="mob" name="tel" placeholder="Enter 10 digit phone number">
+                <error-output class="mob-error" for="mob"></error-output>
             </div>
-            <div>
-                <label for="tel">Telephone: </label>
-                <input type="tel" id="tel" name="tel">
-                <error-output class="tel-error" for="tel"></error-output>
-            </div>
-            <div>
-                <label for="search">Search: </label>
-                <input type="search" id="search" name="search">
-            </div>
-            <div class="nativeDateTimePicker">
-                <label for="party">Choose a date and time:</label>
-                <input type="datetime-local" id="party" name="bday">
+            
+            <div class="entry">
+                <label for="date">Date and time:</label>
+                <input type="datetime-local" id="date" name="date">
                 <span class="validity"></span>
             </div>
-            <div>
-                <label for="salary">Choose your salary: </label>
+            <div class="entry">
+                <label for="salary">Salary: </label>
                 <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
                 <output class="salary-output" for="salary">400000</output>
             </div>
             <div>
-                <button>Submit</button>
+                <div class="btn">
+                    <button type="reset" id="reset">Reset</button>
+                </div>
+                <div class="btn">
+                    <button type="submit" id="send" onclick="check()">Submit</button><br>
+                </div>
             </div>
         </form>
+        <div id="spanresult"></div>
         <script src="../JS/InputForm.js"></script>        
     </body>
 </html>
